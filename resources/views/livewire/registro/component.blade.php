@@ -1,0 +1,21 @@
+<div>
+    @if ($vista == 'paso-uno')
+        @include('livewire.registro.paso1')
+    @elseif ($vista == 'paso-dos')
+        @include('livewire.registro.paso2')
+    @elseif ($vista == 'paso-tres')
+        @include('livewire.registro.paso3')
+    @elseif ($vista == 'paso-cuatro')
+        @include('livewire.registro.paso4')
+    @elseif ($vista == 'importar-familia')
+        @include('livewire.registro.familias.panel')
+    @elseif ($vista == 'crear-familia')
+        @include('livewire.registro.familias.form')
+    @elseif ($vista == 'paso-cinco')
+        @include('livewire.registro.paso5')
+    @elseif ($vista == 'crear-mesa')
+        @include('livewire.registro.paso5')
+    @elseif ($vista == 'crear-salon')
+        @include('livewire.registro.paso5')
+    @endif
+</div>
