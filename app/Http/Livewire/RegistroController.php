@@ -10,7 +10,7 @@ use Illuminate\Validation\Rule;
 class RegistroController extends Component
 {
 
-    public $vista = 'paso-uno', $form = false;
+    public $vista = 'paso-dos', $form = false;
 
     //Public del primer paso, registro de usuario
     public $name, $last_name,$nif, $commercial_name, $address, $number, $phone, $city, $district, $state, $email, $password;
@@ -50,13 +50,12 @@ class RegistroController extends Component
                 'max:255',
                 Rule::unique('users')->ignore(auth()->user())
             ],
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|string|min:8',
         ];
     }
 
     public function pasoDos()
     {
-        dd();
         sleep(1);
 
         $this->validate($this->rules(), User::$messages);

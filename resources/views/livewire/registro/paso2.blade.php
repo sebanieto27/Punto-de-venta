@@ -30,69 +30,65 @@
                     </div>
 
                     <div class="px-5 sm:px-20 mt-10 pt-10 border-t border-gray-200 dark:border-dark-5">
-                        <div class="grid grid-cols-3 px-5 gap-5 items-center justify-center mt-5"
-                            style="justify-items: center;">
-
-                            <div
-                                class="w-40 h-44  col-span-1 items-center justify-self-center">
-                                <div class="w-40 h-40  rounded-full overflow-hidden">
-                                    <img alt="Sistema POS Buela" class="w-full h-full object-cover"
-                                        src="dist/images/panaderia.png">
+                        <form wire:submit.prevent="submit" class="validate-form">
+                            <div class="grid grid-cols-3 px-5 gap-5 items-center justify-center mt-5"
+                                style="justify-items: center;">
+                                <div class="w-40 h-44  col-span-1 items-center justify-self-center">
+                                    <div class="w-40 h-40  rounded-full overflow-hidden">
+                                        <img alt="Sistema POS Buela" class="w-full h-full object-cover"
+                                            src="dist/images/panaderia.png">
+                                    </div>
+                                    <div class="text-gray-600 text-center mt-2 text-sm">Panadería</div>
                                 </div>
-                                <div class="text-gray-600 text-center mt-2 text-sm">Panadería</div>
-                            </div>
 
-                            <div
-                                class="w-40 h-44  col-span-1 items-center justify-self-center">
-                                <div class="w-40 h-40  rounded-full overflow-hidden">
-                                    <img alt="Sistema POS Buela" class="w-full h-full object-cover"
-                                        src="dist/images/bar.jpg">
+                                <div class="w-40 h-44  col-span-1 items-center justify-self-center">
+                                    <div class="w-40 h-40  rounded-full overflow-hidden">
+                                        <img alt="Sistema POS Buela" class="w-full h-full object-cover"
+                                            src="dist/images/bar.jpg">
+                                    </div>
+                                    <div class="text-gray-600 text-center mt-2 text-sm">Bar/Cafetería</div>
                                 </div>
-                                <div class="text-gray-600 text-center mt-2 text-sm">Bar/Cafetería</div>
-                            </div>
 
-                            <div
-                                class="w-40 h-44  col-span-1 items-center justify-self-center">
-                                <div class="w-40 h-40  rounded-full overflow-hidden">
-                                    <img alt="Sistema POS Buela" class="w-full h-full object-cover"
-                                        src="dist/images/restaurante.jpg">
+                                <div class="w-40 h-44  col-span-1 items-center justify-self-center">
+                                    <button wire:click.prevent="pasoTres" type="button" name="tipo_negocio.restaurante" wire:model="tipo_negocio">
+                                        <div class="w-40 h-40  rounded-full overflow-hidden">
+                                            <img alt="Sistema POS Buela" class="w-full h-full object-cover"
+                                                src="dist/images/restaurante.jpg">
+                                        </div>
+                                    </button>
+                                    <div class="text-gray-600 text-center mt-2 text-sm">Restaurante</div>
                                 </div>
-                                <div class="text-gray-600 text-center mt-2 text-sm">Restaurante</div>
-                            </div>
 
-                            <div
-                                class="w-40 h-44  col-span-1 items-center justify-self-center">
-                                <div class="w-40 h-40  rounded-full overflow-hidden">
-                                    <img alt="Sistema POS Buela" class="w-full h-full object-cover"
-                                        src="dist/images/fastfood.jpg">
+                                <div class="w-40 h-44  col-span-1 items-center justify-self-center">
+                                    <div class="w-40 h-40  rounded-full overflow-hidden">
+                                        <img alt="Sistema POS Buela" class="w-full h-full object-cover"
+                                            src="dist/images/fastfood.jpg">
+                                    </div>
+                                    <div class="text-gray-600 text-center mt-2 text-sm">Fastfood</div>
                                 </div>
-                                <div class="text-gray-600 text-center mt-2 text-sm">Fastfood</div>
-                            </div>
 
-                            <div
-                                class="w-40 h-44  col-span-1 items-center justify-self-center">
-                                <div class="w-40 h-40  rounded-full overflow-hidden">
-                                    <img alt="Sistema POS Buela" class="w-full h-full object-cover"
-                                        src="dist/images/retail.jpg">
+                                <div class="w-40 h-44  col-span-1 items-center justify-self-center">
+                                    <div class="w-40 h-40  rounded-full overflow-hidden">
+                                        <img alt="Sistema POS Buela" class="w-full h-full object-cover"
+                                            src="dist/images/retail.jpg">
+                                    </div>
+                                    <div class="text-gray-600 text-center mt-2 text-sm">Retail</div>
                                 </div>
-                                <div class="text-gray-600 text-center mt-2 text-sm">Retail</div>
-                            </div>
 
-                            <div
-                                class="w-40 h-44  col-span-1 items-center justify-self-center">
-                                <div class="w-40 h-40  rounded-full overflow-hidden">
-                                    <img alt="Sistema POS Buela" class="w-full h-full object-cover"
-                                        src="dist/images/barberia.jpg">
+                                <div class="w-40 h-44  col-span-1 items-center justify-self-center">
+                                    <div class="w-40 h-40  rounded-full overflow-hidden">
+                                        <img alt="Sistema POS Buela" class="w-full h-full object-cover"
+                                            src="dist/images/barberia.jpg">
+                                    </div>
+                                    <div class="text-gray-600 text-center mt-2 text-sm">Barbería</div>
                                 </div>
-                                <div class="text-gray-600 text-center mt-2 text-sm">Barbería</div>
                             </div>
-
-                        </div>
-                        <div class="intro-y col-span-12 flex items-center justify-center sm:justify-end mt-5">
-                            <button wire:click.prevent="pasoTres" type="button" class="btn btn-primary w-24 ml-2">
-                                Siguiente
-                            </button>
-                        </div>
+                            <div class="intro-y col-span-12 flex items-center justify-center sm:justify-end mt-5">
+                                <button wire:click.prevent="pasoTres" type="button" class="btn btn-primary w-24 ml-2">
+                                    Siguiente
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <!-- END: Wizard Layout -->

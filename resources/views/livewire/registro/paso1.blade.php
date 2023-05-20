@@ -44,9 +44,8 @@
                                     <label for="validation-form-2" class="form-label w-full flex flex-col sm:flex-row">
                                         Apellido <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600"></span>
                                     </label>
-                                    <input id="validation-form-2" type="text" name="last_name"
-                                        wire:model.lazy="last_name" class="form-control" placeholder="" minlength="2"
-                                        required>
+                                    <input id="validation-form-2" type="text" name="last_name" wire:model="last_name"
+                                        class="form-control" placeholder="" minlength="2" required>
                                     @error('last_name')
                                         <div class="text-red-500 mt-1">{{ $message }}</div>
                                     @enderror
@@ -67,7 +66,7 @@
                                         Nombre comercial <span
                                             class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600"></span>
                                     </label>
-                                    <input type="text" name="commercial_name" wire:model.lazy="commercial_name"
+                                    <input type="text" name="commercial_name" wire:model="commercial_name"
                                         class="form-control" placeholder="" minlength="2" required>
                                     @error('commercial_name')
                                         <div class="text-red-500 mt-1">{{ $message }}</div>
@@ -77,7 +76,7 @@
                                 <div class="input-form"> <label class="form-label w-full flex flex-col sm:flex-row">
                                         Dirección <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600"></span>
                                     </label>
-                                    <input type="text" name="address" wire:model.lazy="address" class="form-control"
+                                    <input type="text" name="address" wire:model="address" class="form-control"
                                         placeholder="" minlength="2" required>
                                     @error('address')
                                         <div class="text-red-500 mt-1">{{ $message }}</div>
@@ -98,7 +97,7 @@
                                 <div class="input-form"> <label class="form-label w-full flex flex-col sm:flex-row">
                                         Población <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600"></span>
                                     </label>
-                                    <input type="text" name="city" wire:model.lazy="city" class="form-control"
+                                    <input type="text" name="city" wire:model="city" class="form-control"
                                         placeholder="" minlength="2" required>
                                     @error('city')
                                         <div class="text-red-500 mt-1">{{ $message }}</div>
@@ -109,8 +108,8 @@
                                 <div class="input-form"> <label class="form-label w-full flex flex-col sm:flex-row">
                                         Barrio <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600"></span>
                                     </label>
-                                    <input type="text" name="district" wire:model.lazy="district"
-                                        class="form-control" placeholder="" minlength="2" required>
+                                    <input type="text" name="district" wire:model="district" class="form-control"
+                                        placeholder="" minlength="2" required>
                                     @error('district')
                                         <div class="text-red-500 mt-1">{{ $message }}</div>
                                     @enderror
@@ -119,8 +118,8 @@
                                 <div class="input-form"> <label class="form-label w-full flex flex-col sm:flex-row">
                                         Provincia <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600"></span>
                                     </label>
-                                    <input type="text" name="state" wire:model.lazy="state"
-                                        class="form-control" placeholder="" minlength="2" required>
+                                    <input type="text" name="state" wire:model="state" class="form-control"
+                                        placeholder="" minlength="2" required>
                                     @error('state')
                                         <div class="text-red-500 mt-1">{{ $message }}</div>
                                     @enderror
@@ -129,8 +128,8 @@
                                 <div class="input-form"> <label class="form-label w-full flex flex-col sm:flex-row">
                                         Teléfono <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600"></span>
                                     </label>
-                                    <input type="number" name="phone" wire:model.lazy="phone"
-                                        class="form-control" placeholder="" minlength="2" required>
+                                    <input type="number" name="phone" wire:model="phone" class="form-control"
+                                        placeholder="" minlength="5" required>
                                     @error('phone')
                                         <div class="text-red-500 mt-1">{{ $message }}</div>
                                     @enderror
@@ -140,8 +139,8 @@
                                     <label class="form-label w-full flex flex-col sm:flex-row">
                                         Email <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600"></span>
                                     </label>
-                                    <input type="email" name="email" wire:model.lazy="email"
-                                        class="form-control" placeholder="" minlength="2" required>
+                                    <input type="email" name="email" wire:model="email" class="form-control"
+                                        placeholder="" minlength="2" required>
                                     @error('email')
                                         <div class="text-red-500 mt-1">{{ $message }}</div>
                                     @enderror
@@ -157,6 +156,7 @@
                                         <div class="text-red-500 mt-1">{{ $message }}</div>
                                     @enderror
                                 </div>
+
 
                             </div>
                             <div class="intro-y col-span-12 flex items-center justify-center sm:justify-end mt-5">
